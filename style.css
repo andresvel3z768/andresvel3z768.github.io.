@@ -1,0 +1,287 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header:encabezado css*/
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  
+  /*animacion encabezado*/
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideHeader 0.8s ease-out forwards;
+
+}
+@keyframes slideHeader{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*LOGO DEL ENCABEZADO*/
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/*animacion logo */
+.logo img {
+  height: 40px; /* puedes cambiarlo a 30px, 50px, etc. */
+  width: auto;
+  object-fit: contain; /* asegura que la imagen no se deforme */
+  animation: zoomInlogo 0.8s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes zoomInlogo {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* 🎯 H1 animación */
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+  animation: bounceInText 1s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+@keyframes bounceInText {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+header nav{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+header nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #4fc3f7;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover {
+  color: #4fc3f7;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+/* Hero */
+.hero {
+   background: linear-gradient(135deg, #4fc3f7, #1976d2);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content{
+  opacity: 0;
+  transform: translateY(0);
+  animation: EadenId 1s ease-out 0.9s forwards;
+}
+
+@keyframes EadenId {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn-cta {
+  background-color: #fff;
+  color: #2196f3;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: inline-block;
+
+}
+
+.btn-cta:hover {
+  background-color: #f0f0f0;
+  color: #0d47a1;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Características */
+#caracteristicas {
+  padding: 60px 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#caracteristicas h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #f1f1f1;
+  padding: 30px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Testimonios */
+#testimonios {
+  background-color: #e3f2fd;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+#testimonios h3 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+#testimonios blockquote {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* Contacto */
+#contacto {
+  padding: 60px 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#contacto h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #1565c0;
+}
+
+button[type="submit"]:hover {
+  background-color: #1976d2;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
