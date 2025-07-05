@@ -63,7 +63,7 @@ header {
   }
 }
 
-
+/*Fuente del titulo de la landing*/
 header h1 {
   font-size: 24px;
   margin: 0;
@@ -123,7 +123,7 @@ header nav a:hover {
 header nav a:hover::after {
   width: 100%;
 }
-/* Hero */
+/* Hero cuerpo del producto */
 .hero {
    background: linear-gradient(135deg, #4fc3f7, #1976d2);
   color: white;
@@ -187,12 +187,20 @@ header nav a:hover::after {
   font-size: 28px;
   margin-bottom: 30px;
 }
-
+@keyframes animacion_derecha{
+  0%{
+    transform: translateX(300px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
 .cards {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+  animation: animacion_derecha 2s forwards;
 }
 
 .card {
@@ -204,20 +212,49 @@ header nav a:hover::after {
 }
 
 /* Testimonios */
-#testimonios {
+.Testimonios {
   background-color: #e3f2fd;
   padding: 60px 40px;
   text-align: center;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  align-items: center;
 }
 
-#testimonios h3 {
-  font-size: 26px;
-  margin-bottom: 30px;
+@keyframes slideAndScale {
+    0% {
+        transform: translateX(-50%) scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
 }
 
-#testimonios blockquote {
-  font-style: italic;
-  margin-bottom: 20px;
+.Testimonios-card{
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 200px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: slideAndScale 3s ease-out infinite;
+    opacity: 0;
+}
+.testimonials .testimonial-card.visible {
+    opacity: 1; /* Se vuelve visible cuando recibe la clase 'visible' */
+}
+
+.Testimonios-texto{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.Testimonios-autor{
+  padding: 1rem;
 }
 
 /* Contacto */
