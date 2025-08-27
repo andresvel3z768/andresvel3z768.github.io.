@@ -21,7 +21,7 @@ Landing page diseñada para personas emprendedoras que desean promocionar un pro
 *(Puedes agregar aquí screenshots del proyecto si los tienes)*
 
 ## 🌐 Demo en línea
-[🔗 Ver demo](#) *(pon aquí el enlace si lo tienes en Netlify, Vercel, GitHub Pages, etc.)*
+[https://andresvel3z768.github.io/andresvel3z768.github.io./](#) *(pon aquí el enlace si lo tienes en Netlify, Vercel, GitHub Pages, etc.)*
 
 ## 📁 Repositorio
-[📎 Ver código en GitHub](#) *(enlace a tu repo si ya lo subiste)*
+[https://github.com/andresvel3z768/andresvel3z768.github.io..git](#) *(enlace a tu repo si ya lo subiste)*
